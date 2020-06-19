@@ -5,7 +5,8 @@ import login from '../src/components/User/UserLogin'
 import newsDetail from '../src/components/News/NewsListDetail'
 import userCenter from '../src/components/User/UserCenter'
 import userData from '../src/components/User/UserData'
-
+import userSign from '../src/components/User/Usersign.vue'
+ 
 Vue.use(Router)
 let routes = [
     {
@@ -24,6 +25,12 @@ let routes = [
         component:newsDetail,
         props:true,
         name:'newsdetail'
+    },
+     {
+        path:'/userSign',
+        component:userSign,
+        props:true,
+        name:'usersign'
     },
     {
         path:'/userCenter',

@@ -10,6 +10,7 @@
             </el-aside>
             <el-main>
                 <my-main></my-main>
+                <my-list></my-list>
             </el-main>
             <el-aside width="400px" class="rigthAside">
                 <my-user></my-user>
@@ -19,26 +20,25 @@
 </template>
 
 <script>
-    import MyNav from './Nav/Nav'
-    import MyUser from './User/User'
-    import MyHeader from './header'
-    import MyMain from './News/News'
-    
+    import MyHeader from './header'//顶部导航栏
+    import MyNav from './Nav/Nav'//中间左边部分"今日头条"
+    import MyUser from './User/User' //中间右边搜索栏
+    import MyMain from './News/News' //中间中间内容
+    import MyList from '../components/News/NewsListDetail'//刷新
     export default {
         name: 'index',
         components: {
             MyNav,
             MyUser,
             MyHeader,
-            MyMain
+            MyMain,
+            MyList
         },
     }
 </script>
 
 <style>
-    .el-aside {
-        text-align: center;
-    }
+    
     .el-main {
         min-width: 660px;
     }
